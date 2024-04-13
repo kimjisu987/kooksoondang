@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국순당</title>
+  <!-- 파비콘 이미지 삽입하기 -->
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+  <!-- 1. 초기화 -->
+  <link href="./css/reset.css" type="text/css" rel="stylesheet">
+  <!-- 2. 공통서식 -->
+  <link href="./css/common.css" type="text/css" rel="stylesheet">
+  <!-- 3. 메인서식 -->
+  <link href="./css/main.css" type="text/css" rel="stylesheet">
+  <!-- 4. 아이콘폰트(폰트어썸) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" type="text/css">
+  <!-- 메인슬라이드 스와이프 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+</head>
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 상단헤더영역 시작 -->
+  <header>
+    <h1>
+      <a href="index.html" title="메인페이지로 바로가기">메인페이지</a>
+    </h1>
+    <label for="toggle" class="total_btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <div class="header_right">
+      <a href="#" title="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#" title="mypage"><i class="fa-regular fa-user"></i></a>
+    </div>
+
+    <!-- 전체메뉴 -->
+    <nav class="gnb">
+      <label for="toggle" class="fas fa-times"></label>
+      <h2>
+        <a href="#" title="메인로고">
+          <img src="../images/main_logo.svg" alt="메인페이지로 바로가기">
+        </a>
+      </h2>
+      <ul>
+        <li><a href="#" title="국순당">국순당 <i class='fas fa-angle-down'></i></a>
+          <ul class="sub">
+            <li><a href="#" title="회사소개">회사소개</a></li>
+            <li><a href="#" title="재료 및 공정">재료 및 공정</a></li>
+            <li><a href="#" title="찾아오시는 길">찾아오시는 길</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="전체상품">전체상품 <i class='fas fa-angle-down'></i></a>
+          <ul class="sub">
+            <li><a href="#" title="신제품">신제품</a></li>
+            <li><a href="#" title="막걸리">막걸리</a></li>
+            <li><a href="#" title="백세고와백세주">백세고&#x00B7;백세주</a></li>
+            <li><a href="#" title="법고창신">법고창신</a></li>
+            <li><a href="#" title="계열사 제품">계열사 제품</a></li>
+            <li><a href="#" title="선물세트">선물세트</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="광고및홍보">광고&#x00B7;홍보 <i class='fas fa-angle-down'></i></a>
+          <ul class="sub">
+            <li><a href="#" title="국순당 소식">국순당 소식</a></li>
+            <li><a href="#" title="광고자료">광고자료</a></li>
+            <li><a href="#" title="백세주마을">백세주마을</a></li>
+            <li><a href="#" title="인재채용">인재채용</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="고객지원">고객지원 <i class='fas fa-angle-down'></i></a>
+          <ul class="sub">
+            <li><a href="#" title="주향로 견학">주향로 견학</a></li>
+            <li><a href="#" title="자주하는 질문">자주하는 질문</a></li>
+            <li><a href="#" title="구매및일반문의">구매&#x00B7;일반문의</a></li>
+          </ul>
+        </li>
+        <li><a href="#" title="투자정보">투자정보 <i class='fas fa-angle-down'></i></a>
+          <ul class="sub">
+            <li><a href="#" title="회사현황">회사현황</a></li>
+            <li><a href="#" title="주가정보">주가정보</a></li>
+            <li><a href="#" title="공시현황">공시현황</a></li>
+            <li><a href="#" title="IR자료">IR자료</a></li>
+          </ul>
+        </li>
+        <li class="top_sns">
+          <a href="#none" title="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#none" title="페이스북"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#none" title="유투브"><i class="fa-brands fa-youtube"></i>
+        </li></a>
+      </ul>
+    </nav>
+  </header>
+  <!-- 메인영역 시작 -->
+  <main>
+    <!-- 1. 메인 슬라이드 이미지 -->
+    <article class="main_slide_box">
+      <div class="swiper main_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/main_01.jpg" alt="메인사진1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_02.jpg" alt="메인사진2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_03.jpg" alt="메인사진3">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_04.jpg" alt="메인사진4">
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="slide_txt">
+        <h2>국순당</h2>
+        <p>우리의 누룩으로 좋은 술을 빚는 집,<br>
+          술을 빚기 전에 먼저 사람을 생각합니다.
+        </p>
+      </div>
+    </article>
+
+    <!-- 2. 국순당 제품소개 -->
+    <article class="menu_box">
+      <h4 class="menu_title">국순당 제품소개</h4>
+      <input type="radio" id="tab01" name="a" class="menu_radio" checked><label for="tab01">신제품</label>
+      <input type="radio" id="tab02" name="a" class="menu_radio"><label for="tab02">백세주</label>
+      <input type="radio" id="tab03" name="a" class="menu_radio"><label for="tab03">막걸리</label>
+
+      <div class="swiper menu_slide1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product00_1.png" alt="신제품1">
+              <figcaption>
+                <h5>국순당 쌀 바나나</h5>
+                <p>
+                  <b>용량</b> 750ml, 350ml<br>
+                  <b>알코올도수</b> 3.5도<br>
+                </p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product00_2.png" alt="신제품2">
+              <figcaption>
+                <h5>국순당 쌀 단팥</h5>
+                <p>
+                  <b>용량</b> 750ml, 350ml<br>
+                <b>알코올도수</b> 3.5도<br>
+              </p>
+              <p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product00_3.png" alt="신제품3">
+              <figcaption>
+                <h5>백세주 과하</h5>
+                <p>
+                  <b>용량</b> 500ml<br>
+                  <b>알코올도수</b> 18도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product00_4.png" alt="신제품4">
+              <figcaption>
+                <h5>예담 리뉴얼</h5>
+                <p>
+                  <b>용량</b> 700ml, 1800ml<br>
+                  <b>알코올도수</b> 13도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="swiper menu_slide2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product02_1.png" alt="백세주1">
+              <figcaption>
+                <h5>백세주</h5>
+                <p>
+                  <b>용량</b> 95ml, 375ml, 500ml<br>
+                  <b>알코올도수</b> 13도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product02_2.png" alt="백세주2">
+              <figcaption>
+                <h5>백세주 과하</h5>
+                <p>
+                  <b>용량</b> 500ml<br>
+                <b>알코올도수</b> 18도<br>
+              </p>
+              <p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product02_3.png" alt="백세주3">
+              <figcaption>
+                <h5>백세주 담</h5>
+                <p>
+                  <b>용량</b> 375ml<br>
+                  <b>알코올도수</b> 13도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product02_4.png" alt="백세주4">
+              <figcaption>
+                <h5>강장 백세주</h5>
+                <p>
+                  <b>용량</b> 700ml<br>
+                  <b>알코올도수</b> 15도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product02_5.png" alt="백세주5">
+              <figcaption>
+                <h5>자양 백세주</h5>
+                <p>
+                  <b>용량</b> 700ml<br>
+                  <b>알코올도수</b> 15도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="swiper menu_slide3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_1.png" alt="막걸리1">
+              <figcaption>
+                <h5>국순당 생막걸리</h5>
+                <p>
+                  <b>용량</b> 750ml<br>
+                  <b>알코올도수</b> 6도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_2.png" alt="막걸리2">
+              <figcaption>
+                <h5>국순당 대박</h5>
+                <p>
+                  <b>용량</b> 700ml<br>
+                <b>알코올도수</b> 6도<br>
+              </p>
+              <p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_3.png" alt="막걸리3">
+              <figcaption>
+                <h5>1000억 프리바이오 막걸리</h5>
+                <p>
+                  <b>용량</b> 750ml, 350ml<br>
+                  <b>알코올도수</b> 5도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_4.png" alt="막걸리4">
+              <figcaption>
+                <h5>국순당 쌀막걸리 무아스파탐</h5>
+                <p>
+                  <b>용량</b> 750ml, 350ml<br>
+                  <b>알코올도수</b> 5.8도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_5.png" alt="막걸리5">
+              <figcaption>
+                <h5>피치로 피치올려</h5>
+                <p>
+                  <b>용량</b> 750ml<br>
+                  <b>알코올도수</b> 3도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="swiper-slide">
+            <figure>
+              <img src="../images/product03_6.png" alt="막걸리6">
+              <figcaption>
+                <h5>첫술</h5>
+                <p>
+                  <b>용량</b> 750ml<br>
+                  <b>알코올도수</b> 7도<br>
+                </p>
+                <p>
+                  <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+    </article>
+
+    <!-- 3. 국순당 역사 -->
+    <section class="history">
+      <div class="swiper history_slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="history_box">
+              <div class="h_img_box">
+                <div class="h_title">
+                  <h4>국순당 역사</h4>
+                  <p>제2의 창업기를 맞이한 국순당입니다.</p>
+                </div>
+                <p class="years">
+                  2020<br>
+                  <span>~2023</span>
+                </p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+              <div class="h_txt_box">
+                <div class="h_txt_left">
+                  <p>2023<br><br><br>
+                  2022<br><br><br>
+                  2021<br><br><br><br>
+                  2020<br><br><br>
+                  </p>
+                </div>
+                <div class="h_txt_right">
+                  <p>라인프렌즈 협업 캐릭터 막걸리 일본·대만 수출<br>
+                  대한민국 주류대상 대상 수상 (일부부문)<br>
+                  한국수산회 어식백세 캠페인 콜라보 마케팅 MOU<br>
+                  대한민국 우리술 품평회 증류주 부문 대상 수상<br>
+                  고용노동부 노사문화 우수기업 선정<br>
+                  대한민국 주류대상 대상 수상 (일부부문)<br>
+                  700만불 수출의 탑 수상<br>
+                  노사파트너십 우수사례 경진대회 우수상 수상<br>
+                  대한민국 디자인대상 디자인 경영부문 최우수상<br>
+                  2021 대한민국 주류대상 대상 수상 (일부부문)<br>
+                  500만불 수출의 탑 수상<br>
+                  2020 대한민국 주류대상 대상 수상 (일부부문)<br>
+                  전통주 베스트 트로피 1위 (일부부문)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="history_box">
+              <div class="h_img_box">
+                <div class="h_title">
+                  <h4>국순당 역사</h4>
+                  <p>제2의 창업기를 맞이한 국순당입니다.</p>
+                </div>
+                <p class="years">
+                  2018<br>
+                  <span>~2019</span>
+                </p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+              <div class="h_txt_box">
+                <div class="h_txt_left">
+                  <p>2019<br><br><br><br><br><br>
+                  2018<br><br><br><br><br><br>
+                  </p>
+                </div>
+                <div class="h_txt_right">
+                  <p>일&#x00B7;생활 균형 우수기업 사례 공모전 대상 수상<br>
+                    대한민국우리술 품평회 최우수상 수상(려)<br>
+                    소비자가 선정한 농업 농식품 상생협력 우수기업<br>
+                    쌀가공품 품평회 1위(1000억 유산균 막걸리)<br>
+                    2019 대한민국 주류대상 대상 수상(일부부문)<br>
+                    전통주 베스트 트로피 전체 1위(려)<br>
+                    일학습병행 우수사례 경진대회 기업 최우수상<br>
+                    제 21차 남북이산가족 상봉행사 만찬주 제공<br>
+                    뉴욕 국제 와인 품평회 금상 수상(백세주)<br>
+                    환경부 지정 녹색기업 4회연속 선정<br>
+                    세계 컨시어지 총회 만찬주 제공<br>
+                    2018 대한민국 주류대상 대상 수상(일부부문)<br>
+                    전통주 베스트 트로피 탁주 부문 1위(옛날막걸리)
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+          <div class="swiper-slide">
+            <div class="history_box">
+              <div class="h_img_box">
+                <div class="h_title">
+                  <h4>국순당 역사</h4>
+                  <p>제2의 창업기를 맞이한 국순당입니다.</p>
+                </div>
+                <p class="years">
+                  2015<br>
+                  <span>~2017</span>
+                </p>
+                <a href="#" title="제품 자세히보기" class="readmore">자세히보기 <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+              <div class="h_txt_box">
+                <div class="h_txt_left">
+                  <p>2017<br><br>
+                  2016<br><br><br><br><br><br>
+                  2015<br><br><br><br>
+                  </p>
+                </div>
+                <div class="h_txt_right">
+                  <p>스포츠 서울 브랜드대상(백세주)<br>
+                    2017 대한민국 주류대상 대상 수상(일부부문)<br>
+                    레드닷 디자인 어워드 커뮤니케이션 부문 수상<br>
+                    경향신문 상반기 히트상품(국순당 쌀 바나나)<br>
+                    상하이 식품박람회 혁신제품 선정(쌀막걸리 과일)<br>
+                    주류 최초 정부 우수문화상품으로 지정(백세주)<br>
+                    2016 대한민국 주류대상 대상 수상(일부부문)<br>
+                    아시아경제 전통주 부문 소비자대상(백세주)<br>
+                    푸드투데이 2015년 히트상품(백세주)<br>
+                    2015 GRAND HARVEST AWARDS 금상 수상<br>
+                    서울신문 베스트브랜드 대상(옛날 막걸리)<br>
+                    멜버른 국제 와인대회 은상 수상(생막걸리)<br>
+                    뉴욕 국제 와인대회 막걸리부문 수상(아이싱)
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+
+    <!-- 4. 국순당 광고이야기 -->
+    <article class="poster_box">
+      <h4>국순당 광고이야기</h4>
+      <!-- 광고이야기 슬라이드 -->
+      <div class="swiper poster_slide">
+        <div class="swiper-wrapper poster_inner">
+          <div class="swiper-slide poster_card">
+            <div class="card_design">
+              <img src="../images/poster_01.jpg" alt="광고포스터1">
+              <p class="poster_name">국순당 쌀 바나나 리뉴얼 출시</p>
+              <p>2023.12</p>
+            </div>
+          </div>
+          <div class="swiper-slide poster_card">
+              <div class="card_design">
+              <img src="../images/poster_02.jpg" alt="광고포스터2">
+              <p class="poster_name">국순당 과하 출시</p>
+              <p>2023.07</p>
+            </div>
+          </div>
+          <div class="swiper-slide poster_card">
+              <div class="card_design">
+              <img src="../images/poster_03.jpg" alt="광고포스터3">
+              <p class="poster_name">백세주 30 출시</p>
+              <p>2022.12</p>
+            </div>
+          </div>
+          <div class="swiper-slide poster_card">
+              <div class="card_design">
+              <img src="../images/poster_04.jpg" alt="광고포스터4">
+              <p class="poster_name">국순당 칠성막사 출시</p>
+              <p>2022.04</p>
+            </div>
+          </div>
+          <div class="swiper-slide poster_card">
+              <div class="card_design">
+              <img src="../images/poster_05.jpg" alt="광고포스터5">
+              <p class="poster_name">국순당 쌀 바밤바밤 출시</p>
+              <p>2021.11</p>
+            </div>
+          </div>
+          <div class="swiper-slide poster_card">
+              <div class="card_design">
+              <img src="../images/poster_01.jpg" alt="광고포스터1">
+              <p class="poster_name">국순당 쌀 죠리퐁당 출시</p>
+              <p>2021.06</p>
+            </div>  
+          </div>  
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </article>
+
+    <!-- 5. 국순당 인스타그램 -->
+    <article class="insta_box">
+      <h4 class="insta_title">인스타그램</h4>
+      <!-- 클릭이벤트 넣을 부분 -->
+      <div class="profile_box">
+        <div class="profile_l">
+          <a href="#" title="국순당공식인스타"><img src="../images/insta_sublogo.png" alt="국순당공식인스타" class="border-active"></a>
+          <p>국순당 공식인스타</p>
+        </div>
+        <div class="profile_r">
+          <a href="#" title="국순당인스타툰"><img src="../images/insta_mainlogo.png" alt="국순당인스타툰"></a>
+          <p>국순당인스타툰</p>
+        </div>
+      </div>
+
+      <!-- 클릭이벤트시 바뀌는 내용들1 -->
+      <div class="insta_list_main">
+        <div class="insta_profile">
+          <img src="../images/insta_sublogo.png" alt="국순당 공식인스타 로고">
+          <p>
+            <span class="insta_title">kooksoondang</span><br>
+            좋은 술만을 고집하는 국순당입니다.
+          </p>
+          <p><i class="fa-solid fa-ellipsis"></i></p>
+        </div>
+        <!-- 슬라이드 이미지 -->
+        <div class="swiper insta_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/insta_01.jpg" alt="인스타그램이미지1">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_02.jpg" alt="인스타그램이미지2">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_03.jpg" alt="인스타그램이미지3">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_04.jpg" alt="인스타그램이미지4">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_05.jpg" alt="인스타그램이미지5">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_06.jpg" alt="인스타그램이미지6">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_07.jpg" alt="인스타그램이미지7">
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/insta_08.jpg" alt="인스타그램이미지8">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- 클릭이벤트시 바뀌는 내용들2 -->
+      <div class="insta_list_sub">
+        <div class="insta_profile">
+          <img src="../images/insta_mainlogo.png" alt="국순당 인스타툰 로고">
+          <p>
+            <span class="insta_title">kooksoondang_insta</span><br>
+            국순당 마케팅 담당자가 전하는 주류회사 이야기
+          </p>
+          <p><i class="fa-solid fa-ellipsis"></i></p>
+        </div>
+        <!-- 슬라이드 이미지 -->
+        <div class="swiper insta_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon1.jpg" alt="인스타그램이미지2">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon2.jpg" alt="인스타그램이미지3">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon3.jpg" alt="인스타그램이미지4">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon4.jpg" alt="인스타그램이미지5">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon5.jpg" alt="인스타그램이미지6">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon6.jpg" alt="인스타그램이미지7">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon7.jpg" alt="인스타그램이미지8">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/mobile_instatoon8.jpg" alt="인스타그램이미지9">
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      
+      <!-- 클릭이벤트에도 바뀌지 않는 부분 / 위치값도 고정 -->
+      <div class="insta_bottom">
+        <p class="l_icon">
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-regular fa-paper-plane"></i>
+        </p>
+        <p class="r_icon">
+          <i class="fa-regular fa-bookmark"></i>
+        </p>
+      </div>
+
+      <a href="#" title="인스타 더보기" class="readmore">인스타 더보기 <i class="fa-solid fa-chevron-right"></i></a>
+    </article>
+
+
+
+  </main>
+  <!-- 푸터영역 시작 -->
+  <footer>
+    <!-- TOP버튼 -->
+    <a href="#" title="상단으로 바로가기" id="top_btn">
+      <i class="fas fa-angle-up"></i>
+      <br>TOP
+    </a>
+    <div class="f_top">
+      <div class="f_con">
+
+        <div class="familysite">
+          <ul>
+            <li><a href="#none" title="패밀리사이트">패밀리사이트 <i class='fas fa-angle-down'></i></a>
+              <ul class="sub_family">
+                <li><a href="#" title="법고창신">법고창신</a></li>
+                <li><a href="#" title="백세주 브랜드">백세주 브랜드</a></li>
+                <li><a href="#" title="예담 브랜드">예담 브랜드</a></li>
+                <li><a href="#" title="주향로">주향로</a></li>
+                <li><a href="#" title="우리술 아름터">우리술 아름터</a></li>
+                <li><a href="#" title="국순당 여주명주">국순당 여주명주</a></li>
+                <li><a href="#" title="국순당 고창명주">국순당 고창명주</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="sns">
+          <li><a href="#none" title="인스타그램"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#none" title="페이스북"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="#none" title="유투브"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f_bottom">
+      <a href="#" title="국순당 로고"><img src="../images/main_logo.svg" alt="국순당 로고"></a>
+      <ul class="f_nav">
+        <li><a href="#none" title="개인정보처리방침">개인정보처리방침</a></li>
+        <li><a href="#none" title="이용약관">이용약관</a></li>
+        <li><a href="#none" title="찾아오시는 길">찾아오시는 길</a></li>
+      </ul>
+
+      <address>
+        <ul class="add_left">
+          <li>(주) 국순당</li>
+          <li>고 객 센 터</li>
+          <li>횡 성 본 사</li>
+          <li>서울사무소</li>
+        </ul>
+        <ul class="add_right">
+          <li>사업자등록번호 : 000-00-00000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표자 : 000</li>
+          <li>000-0000-000</li>
+          <li>강원특별자치도 횡성군 둔내면 강변로 000</li>
+          <li>서울시 강남구 삼성동 000-0</li>
+        </ul>
+      </address>
+
+      <div class="copy">
+        <p>COPYRIGHTⓒ 2024 BY 000 CO.LTD</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // 0. 토글 내비 gnb~lnb 오픈 스크립트
+    // DOMContentLoaded 로 초기 html 문서 완전히 불러오기
+    document.addEventListener("DOMContentLoaded", function() {
+      // gnb ul 요소의 자식 li 요소 선택해서 'gnb' 변수 만들기
+      var gnbItems = document.querySelectorAll(".gnb ul li");
+
+      // 각 gnb 항목에 대해 클릭 이벤트를 추가
+      gnbItems.forEach(function(gnbItem) {
+        gnbItem.addEventListener("click", function() {
+          // 다른 모든 gnb 메뉴의 lnb를 숨기기
+          gnbItems.forEach(function(item) {
+            var subMenu = item.querySelector(".sub");
+            // 현재 선택된 항목을 제외하고 모든 lnb를 숨김
+            if (subMenu && item !== gnbItem) {
+              subMenu.style.maxHeight = null;
+            }
+          });
+
+          // 현재 선택한 gnb 항목의 lnb 토글
+          var lnb = this.querySelector(".sub");
+
+          if (lnb) {
+            if (lnb.style.maxHeight) {
+              lnb.style.maxHeight = null;
+            } else {
+              lnb.style.maxHeight = lnb.scrollHeight + "px";
+            }
+          }
+        });
+      });
+    });
+
+
+  // TOP버튼
+  // window객체
+  let scrollTop;
+  const t_btn = document.getElementById('top_btn');
+
+  // window 객체에 스크롤을 하면 함수 발생
+  window.addEventListener('scroll', function(){
+    // scrollTop 변수에 값(스크롤Y)을 담아라
+    scrollTop = window.scrollY;
+    // 개발자 모드에서 보는 출력 방법
+    console.log(scrollTop);
+    // 만약에 세로 스크롤 값이 900픽셀 이상일 경우
+    if(scrollTop>=500){
+      // 클래스 .act 서식(display: block;)을 적용한다.
+      t_btn.classList.add('act');
+    } else{ //그렇지 않은 경우 (조건문을 또 쓰려면 else if를 써야함)
+      t_btn.classList.remove('act');
+    }
+  })
+
+  // 1. 메인 슬라이드 이미지
+  var swiper = new Swiper(".main_slide", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // 2. 메뉴 슬라이드 이미지
+  var swiper = new Swiper(".menu_slide1", {
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 0,
+    grabCursor: true,
+    loop: true,   // 이미지 끊기지 않고 무한루프
+    initialSlide: 1,    // 1번 이미지가 왼쪽에 붙어 나오게
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper(".menu_slide2", {
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 0,
+    grabCursor: true,
+    loop: true,
+    initialSlide: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper(".menu_slide3", {
+    slidesPerView: 2,
+    centeredSlides: true,
+    spaceBetween: 0,
+    grabCursor: true,
+    loop: true,
+    initialSlide: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // 3. 히스토리 슬라이드 이미지
+  var swiper = new Swiper(".history_slide", {
+    slidesPerView: 1,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // 4. 국순당 광고 이야기
+  var swiper = new Swiper(".poster_slide", {
+    slidesPerView: 1,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  // 5. 인스타그램 슬라이드 이미지
+  var swiper = new Swiper(".insta_slide", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // 5. 인스타그램 프로필 클릭시 내용 바뀌기
+  document.addEventListener("DOMContentLoaded", function() {
+// 프로필 버튼 요소들과 바뀌는 내용들을 변수에 저장
+const profileL = document.querySelector('.profile_l');
+const profileR = document.querySelector('.profile_r');
+const instaListMain = document.querySelector('.insta_list_main');
+const instaListSub = document.querySelector('.insta_list_sub');
+const profileImageL = document.querySelector('.profile_l img');
+const profileImageR = document.querySelector('.profile_r img');
+
+// profileL 클릭 시
+profileL.addEventListener('click', function(event) {
+  event.preventDefault(); // 링크의 기본 동작 제거
+  instaListSub.style.display = 'none'; // insta_list_sub 숨기기
+  instaListMain.style.display = 'block'; // insta_list_main 보이기
+  profileImageL.classList.add('border-active');
+  profileImageR.classList.remove('border-active');
+});
+
+// profileR 클릭 시
+profileR.addEventListener('click', function(event) {
+  event.preventDefault(); // 링크의 기본 동작 제거
+  instaListMain.style.display = 'none'; // insta_list_main 숨기기
+  instaListSub.style.display = 'block'; // insta_list_sub 보이기
+  profileImageR.classList.add('border-active');
+  profileImageL.classList.remove('border-active');
+});
+});
+  
+  // 6. 푸터 패밀리 사이트
+  // DOMContentLoaded 로 초기 html 문서 완전히 불러오기
+  document.addEventListener("DOMContentLoaded", function() {
+    // 패밀리사이트 ul 요소의 자식 li 요소 선택해서 'familysite' 변수 만들기
+    var familysite = document.querySelectorAll(".familysite ul li");
+
+    // forEach() 메서드 : 배열의 각 요소에 한번씩 함수 실행, 위에서 만든 'familysite'에 함수 실행 :: ul 요소의 자식 li에 함수 실행
+    familysite.forEach(function(familysite) {
+      // addEventListener() 메서드로 이벤트 만들기, 클릭이벤트가 실행되면
+      familysite.addEventListener("click", function() {
+        // this = familysite(위에 function(familysite)) :: querySelector(".sub_family") : familysite에서 클래스가 'sub_family'인 요소를 선택해서 'familysitelist' 변수 만들기 :: 열려야 할 서브메뉴를 변수로 만든 것
+        var familysitelist = this.querySelector(".sub_family");
+        
+        // 만약에 familysitelist(서브메뉴)가
+        if (familysitelist) {
+          // max.height 값이 없으면 null을 할당 :: 안보이게 해라 (css에서 max-height:0;을 준 이유)
+          if (familysitelist.style.maxHeight) {
+            familysitelist.style.maxHeight = null;
+            // 그게 아니라면 max.height를 scrollHeight:요소의 실제 높이에 px 단위를 변환해서 적용시켜라 :: 높이를 만들어 보여지게 만든다.
+          } else {
+            familysitelist.style.maxHeight = familysitelist.scrollHeight + "px";
+          }
+          }
+        })
+      })
+    })
+  </script>
+</body>
+</html>

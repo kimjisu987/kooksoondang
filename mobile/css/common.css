@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+/* 기본스타일 3가지(폰트, 색상, 링크) */
+
+/* Noto Noto Serif KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+/* Noto Sans KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --main_font: 'Noto Serif KR';
+  --sub_font: 'Noto Sans KR';
+
+  --main_color01:#ff8c00;
+  --main_color02:#c8dee3;
+  --sub_color01:#f1ece6;
+  --sub_color02:#757575;
+  --sub_color03:#D9D9D9;
+
+  --txt_color01:#333333;
+  --txt_color02:#0C0C0C;
+  --txt_color03:#D9D9D9;
+
+  --font_size_12:12px;
+  --font_size_13:13px;
+  --font_size_14:14px;
+  --font_size_16:16px;
+  --font_size_18:18px;
+  --font_size_20:20px;
+  --font_size_24:24px;
+  --font_size_32:32px;
+  --font_size_40:40px;
+}
+
+body{
+  font-family: "Noto Serif KR", "Noto Sans KR", arial;
+  font-size:var(--font_size_14);
+  color:var(--txt_color02);
+  line-height:160%;
+}
+a{
+  color: inherit;
+  text-decoration:none;
+  font-size: inherit;
+}
+
+/* 내비게이션 sns */
+
+/* 헤더 전체 */
+header{
+  width: 100%;
+  height: 150px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 2;
+}
+/* 헤더부분 메인로고 */
+header > h1{
+  position: absolute;
+  left:50%; top:10px;
+  transform: translateX(-50%);
+}
+header > h1 > a{
+  display: block;
+  width: 100px; height: 50px;
+  padding: 10px 0px 0px 10px;
+  font-size: 14px;
+  background-image: url(../../images/main_logo.svg);
+  background-repeat: no-repeat;
+  text-indent: -999px;
+}
+/* 헤더 우측 돋보기, 유저 아이콘 */
+.header_right{
+  float: right;
+  padding: 15px 15px 0px 0px;
+  font-size: 30px;
+  padding-top: 25px;
+  letter-spacing: 8px;
+}
+/* 토글버튼서식 */
+.total_btn{
+  position: absolute;
+  left: 15px; top: 25px;
+}
+.fa-bars{font-size: 40px;}
+#toggle{display: none;}
+
+/* gnb 메뉴 서식 */
+/* 내비게이션 전체 박스 */
+.gnb{
+  width: 100%; height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.7);
+  padding-right: 30%;
+  box-sizing: border-box;
+  left: -100%; top: 0px;
+  transition: 0.3s;
+}
+/* 내비게이션 내 메인로고 */
+.gnb > h2{
+  position: absolute;
+  top: 80px; left: 30px;
+  width: 100px; height: 50px;
+}
+/* 토글버튼 클릭시 gnb 위치(left:100%)에서 left:0으로 이동
+#toggle은 <input type="checkbox" id="toggle"> 체크박스임
+체크박스와 for="toggle"이 묶인 햄버거아이콘이 연결되어
+체크박스 선택/해제(햄버거, X박스)가 된다 */
+#toggle:checked + header > .gnb{
+  left: 0px;  
+}
+/* 내비게이션 내 흰박스 */
+.gnb > ul{
+  width: 100%; height: 100%;
+  padding: 150px 15px 0px 15px;
+  background-color: #fff;  
+}
+/* 내비게이션 내 리스트 전체박스 */
+.gnb > ul > li:not(:last-child){
+  text-indent: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c1bbac;
+}
+/* 내비게이션 내 gnb */
+.gnb > ul > li > a{
+  font-size: var(--font_size_16);
+  font-weight: bold;
+  display: block;     /* 한 줄 전체 터치를 위한 요소 변경 */
+  padding-top: 20px;
+  line-height: 40px;
+}
+.sub > li > a{
+  text-indent: 40px;
+}
+/* 내비게이션 내 sns */
+.top_sns{
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.top_sns i{
+  display: inline-block;
+  width: 48px; height: 48px;
+  box-sizing: border-box;
+  font-size: var(--font_size_24);
+  text-align: center;
+  padding: 12px 0px;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  border-radius: 100%;
+}
+/* 내비게이션 내 lnb */
+.gnb > ul > li > ul > li > a{
+  font-size: var(--font_size_14);
+  line-height: 30px;
+  display: block;     /* 한 줄 전체 터치를 위한 요소 변경 */
+}
+.gnb > ul > li > ul{
+  /* margin-bottom: 5px; */
+}
+/* 내비게이션 내 gnb 우측 아래 ∨아이콘 */
+.gnb .fa-angle-down{
+  float: right;
+  padding: 10px 50px 10px 0px;
+  font-size: 24px;
+}
+
+/* gnb 클릭시 lnb 오픈 */
+.gnb ul li ul {
+  overflow: hidden;   /* 넘치는 부분 숨기기 */
+  max-height: 0;    /* 높이 0으로 설정 - 높이가 생기면서 애니메이션 효과 주려고 */
+  transition: max-height 0.3s ease-in-out;    /* max-height:높이 최대 설정, ease-in-out: 천천-보통-천천(linear 속성시 등속) */
+}
+
+/* 닫기 버튼 */
+.gnb .fa-times{
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  right: 3%; top: 3%;
+  transition: 0.5s;
+}
+.gnb .fa-times:hover{
+  transform: rotate(180deg);
+}
+/* TOP버튼 */
+#top_btn{
+  position: fixed;
+  right: 5%; bottom: 5%;
+  background: #fff;
+  font-family: var(--sub_font);
+  font-size: var(--font_size_16);
+  font-weight: bold;
+  text-align: center;
+  line-height: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 100%;
+  padding: 12px 12px 13px 11px;
+  box-shadow: 0px 0px 3px #ccc;
+  display: none;
+}
+/* 서식이 중복되어 충돌하는 것을 방지하기 위해 !important로 우선권을 줌 */
+.act{
+  display: block !important;
+}
+
+/* 푸터 시작 */
+footer{
+  width: 100%; height: 450px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--sub_color01);
+}
+
+/* 푸터 위 */
+.familysite{position: relative;}
+.f_top{background-color: var(--main_color02);}
+.f_con{
+  display: flex;
+  justify-content: space-between;
+  width: 90%; height: 80px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* 푸터 패밀리박스 */
+.familysite > ul > li{
+  position: relative;
+}
+.familysite > ul > li > a{
+  font-family: var(--sub_font);
+  font-size: var(--font_size_14);
+  font-weight: bold;
+  padding: 7px 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  border-radius: 30px;
+}
+/* 내비게이션 내 lnb */
+.sub_family{
+  width: 100%;
+  font-family: var(--sub_font);
+  font-size: var(--font_size_14);
+  /* padding: 7px 30px; */
+  background-color: #fff;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  border-radius: 16px;
+}
+/* 보여지기 이벤트 */
+.sub_family{
+  position: absolute;
+  top: 30px;
+  overflow: hidden;   /* 넘치는 부분 숨기기 */
+  max-height: 0;    /* 높이 0으로 설정 - 높이가 생기면서 애니메이션 효과 주려고 */
+  transition: max-height 0.3s ease-in-out;    /* max-height:높이 최대 설정, ease-in-out: 천천-보통-천천(linear 속성시 등속) */
+}
+.familysite > ul > li > ul > li > a{
+  line-height: 30px;
+  display: block;     /* 한 줄 전체 터치를 위한 요소 변경 */
+}
+
+/* 푸터 sns아이콘 */
+footer .sns{display: flex;}
+footer .sns li{
+  margin: 0px 10px;
+}
+footer .sns a{
+  display: inline-block;
+  width: 48px; height: 48px;
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  font-size: 28px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+/* 푸터 아래 */
+.f_bottom img{
+  width: 100px;
+  margin: 30px 0px;
+}
+.f_nav{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+}
+.f_nav > li{
+  font-size: var(--font_size_14);
+  font-weight: bold;
+}
+.f_nav > li > a{
+  display: block;
+  padding: 10px;
+}
+address{
+  width: 100%; height: 100px;
+  margin: 0 auto;
+  font-size: var(--font_size_12);
+  padding: 30px 0px 0px 30px;
+  box-sizing: border-box;
+}
+.add_left{
+  float: left;
+  width: 25%;
+  font-weight: bold;
+}
+.add_left li:not(:last-child){
+  line-height: 180%;
+/* 양쪽정렬방법 */
+  /* &:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+  } */
+}
+.add_right{
+  float: right;
+  width: 70%;
+  padding-left: 1%;
+  box-sizing: border-box;
+}
+.add_right li{
+  text-align: left;
+  line-height: 180%;
+  /* 같이 줄 맞춰주기 위한 속성 */
+  /* &:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+  } */
+}
+.add_right > li:first-child{
+  font-weight: bold;
+}
+.add_right > li > span{
+  width: 10px;
+}
+.copy{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 30px;
+  margin: 0 auto;
+  font-size: var(--font_size_12);
+}

@@ -1,0 +1,405 @@
+@charset "utf-8";
+
+/* 기본스타일 3가지(폰트, 색상, 링크) */
+
+/* Noto Noto Serif KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+/* Noto Sans KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --main_font: 'Noto Serif KR';
+  --sub_font: 'Noto Sans KR';
+
+  --main_color01:#ff8c00;
+  --main_color02:#c8dee3;
+  --sub_color01:#f1ece6;
+  --sub_color02:#757575;
+  --sub_color03:#D9D9D9;
+
+  --txt_color01:#333333;
+  --txt_color02:#0C0C0C;
+  --txt_color03:#D9D9D9;
+
+  --font_size_12:12px;
+  --font_size_13:13px;
+  --font_size_14:14px;
+  --font_size_16:16px;
+  --font_size_18:18px;
+  --font_size_20:20px;
+  --font_size_24:24px;
+  --font_size_32:32px;
+  --font_size_40:40px;
+}
+
+body{
+  font-family: "Noto Serif KR", "Noto Sans KR", arial;
+  font-size:var(--font_size_14);
+  color:var(--txt_color02);
+  line-height:160%;
+  position: relative;
+}
+
+/* ----------------------------------------- */
+.slide h2{text-indent: -9999px;}
+/* 메인시작 */
+
+main{
+  /* 메인이미지 올리려고 높이값 위로 */
+  transform: translateY(-200px);
+  width: 100%;
+}
+/* 메인 슬라이드 */
+.visual_box{
+  position: relative;
+}
+.visual_box .swiper {
+  width: 100%;
+  height: 1024px;
+}
+.visual_box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visual_box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.visual_box .autoplay-progress {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--sub_color03);
+}
+.visual_box .autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--main_color01);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+/* 버튼 서식 편집 */
+/* 슬라이드 좌,우측 버튼 */
+.visual_box .swiper-button-next, .visual_box .swiper-button-prev{
+  color: #fff;
+  text-shadow: 0px 0px 3px #000;
+}
+/* 슬라이드 아래 버튼 버튼 비활성화 */
+.visual_box .swiper-pagination-bullet{
+  background: var(--sub_color03);
+  width: 70px; height: 5px;
+  border-radius: 0px;
+  opacity: 60%;
+}
+/* 슬라이드 아래 버튼 버튼 활성화 */
+.visual_box .swiper-pagination-bullet-active{
+  background: var(--main_color01);
+  opacity: 100%;
+}
+/* h4 타이틀 전체 */
+h4{
+  text-align: center;
+  font-size: var(--font_size_32);
+  line-height: 300%;
+  }
+  .visual_box .silde_inner{
+  position: absolute;
+  bottom: 10%; left: 10%;
+  z-index: 10;
+  font-size: var(--font_size_16);
+  color: #333333;
+  line-height: 180%;
+}
+.visual_box .slide_txt{
+  font-size: var(--font_size_32);
+  font-weight: bold;
+  line-height: 300%;
+}
+/* ----------------------------------------- */
+/* 2. 제품소개 */
+.menu_box{
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+  position: relative;
+}
+
+/* 2-1. 제품소개_슬라이드 */
+.menu_box .swiper{
+  width: 1200px;
+  height: 100%;
+  padding: 40px 0px 100px 0px;
+}
+.menu_box .swiper-slide {
+  text-align: center;
+  height: 100%;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 제품소개 슬라이드 아래 원형 아이콘 */
+.menu_box .swiper-pagination{
+  transform: translateY(-30px);
+}
+.menu_box .swiper-pagination-bullet{
+  background: var(--sub_color01);
+  width: 10px; height: 10px;
+  border-radius: 100%;
+  opacity: 60%;
+}
+.menu_box .swiper-pagination-bullet-active{
+  background: #ff8c00;
+  opacity: 100%;
+}
+/* 자세히보기 버튼박스 디자인 */
+.readmore{
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--sub_font);
+  font-size: var(--font_size_14);
+  padding: 10px 25px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid var(--sub_color03);
+  border-radius: 30px;
+}
+.readmore:hover{
+  background: var(--main_color02);
+  font-weight: bold;
+}
+/* 카테고리 메뉴박스 */
+.menu_box label{
+  display: inline-block;
+  width: 130px; height: 42px;
+  border: 3px solid var(--sub_color03);
+  font-size: var(--font_size_14);
+  padding: 5px 10px;
+  text-align: center;
+  line-height: 150%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: var(--font_size_18);
+  margin: 0px 15px;
+}
+input[type=radio]{display: none;}
+.menu_box label:hover{border-color: var(--main_color01);}
+.menu_box input[type=radio]:checked + label{
+  font-weight: bold;
+  background: var(--main_color01);
+  border: 0px;
+  color: #fff;
+}
+article .menu_slide1, article .menu_slide2, article .menu_slide3{
+  display: none;
+}
+#tab01:checked ~ .menu_slide1{display: block;}
+#tab02:checked ~ .menu_slide2{display: block;}
+#tab03:checked ~ .menu_slide3{display: block;}
+figcaption{
+  font-size: var(--font_size_14);
+  line-height: 150%;
+}
+figcaption > h5{
+  font-size: var(--font_size_16);
+  line-height: 250%;
+}
+/* ----------------------------------------- */
+/* 3. 아티클 회사소개 */
+.company{   /* 회사소개 백그라운드 이미지 */
+  width: 100%; height: 500px;
+  background: url(../images/company_bg.jpg);
+  background-color: var(--sub_color02);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position:center 40%;
+  color: #fff;
+  margin-top: 70px;
+  background-blend-mode: multiply;
+}
+.company_inner{   /* 회사소개 이미지 속 텍스트 박스 */
+  width: 1200px; margin: 0 auto;
+  position: relative;
+  left: 0px; bottom: -250px;
+  line-height: 200%;
+  font-size: var(--font_size_16);
+}
+.company_inner > h5{    /* 회사소개 이미지 속 제목 (국순당) */
+  font-size: var(--font_size_32);
+  line-height: 70px;
+}
+.company_btn{
+  margin-top: 50px;
+}   /* 회사소개 자세히보기 버튼 */
+.readmore2{   /* 회사소개 자세히보기 버튼 디자인 */
+  padding: 10px 25px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+}
+.readmore2:hover{   /* 회사소개 자세히보기 버튼 호버 */
+  background: #fff;
+  color: var(--txt_color02);
+}
+.company_bottom{    /* 회사소개 이미지 아래 텍스트 박스 */
+  width: 1200px;
+  margin: 0 auto;
+}
+.company_grid{    /* 회사소개 이미지 아래 텍스트 박스 그리드 */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.company_bottom > ul > li{    /* 회사소개 텍스트박스 한칸씩 세트 박스 */
+  border-right: 2px solid var(--sub_color03);
+  padding: 50px 20px;
+  font-size: var(--font_size_14);
+  line-height: 180%;
+}
+.company_grid li:first-child {    /* 회사소개 텍스트박스 왼쪽 보더 */
+  border-left: 2px solid var(--sub_color03);
+}
+.company_grid h5{   /* 회사소개 텍스트 제목 */
+  font-size: var(--font_size_18);
+}
+.company_point{     /* 회사소개 텍스트 포인트 */
+  font-family: var(--sub_font);
+  font-size: var(--font_size_40);
+  color: var(--main_color01);
+  font-weight: bold;
+}
+.company_grid p{    /* 회사소개 텍스트 포인트 줄*/
+  padding-top: 30px;
+}
+/* ----------------------------------------- */
+/* 4. 광고이야기 */
+.poster_box{    /* 광고이야기 전체박스 */
+  width: 1200px;
+  height: 780px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 50px;
+  /* overflow: hidden; */
+  position: relative;
+}
+.poster_box .poster_card{   /* 포스트카드 박스 */
+  width: 100%; height: 520px;
+  text-align: center;
+  padding: 20px 0px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px var(--sub_color03);
+  line-height: 220%;
+}
+.poster_box .poster_card > img{   /* 포스트카드 속 이미지 */
+  width: 315px; height: 450px;
+  margin-bottom: 10px;
+}
+.poster_box .poster_card > p{   /* 포스트카드 속 제목 */
+  font-size: var(--font_size_18);
+  font-weight: bold;
+}
+.poster_box .poster_card > .poster_date{    /* 포스트카드 속 날짜 */
+  font-size: var(--font_size_13);
+}
+
+/* 광고이야기 슬라이드이미지 */
+.poster_box .swiper {
+  width: 1200px;
+  height: 600px;
+}
+.poster_box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.poster_box .swiper-slide img {
+  display: block;
+  width: 310px;
+  height: 450px;
+  object-fit: cover;
+}
+.poster_box .swiper {
+  width: 1200px;
+  height: 600px;
+  margin: 20px auto;
+}
+.p_swiper-button-next, .p_swiper-button-prev{
+  font-size: 40px;
+  padding: 10px 15px;
+  color: #fff;
+  text-shadow: 0px 0px 3px #000;
+  display: block;
+  border-radius: 100%;
+}
+.p_swiper-button-prev{
+  position: absolute;
+  top: 400px;
+  z-index: 999;
+}
+.p_swiper-button-next{
+  position: absolute;
+  top: 400px; right: 0px;
+  z-index: 999;
+}
+/* ----------------------------------------- */
+/* 5. 인스타그램 */
+.insta_box{
+  width: 1200px; margin: 0 auto;
+  padding-top: 70px;
+  text-align: center;
+}
+.insta_grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+  grid-gap: 10px;
+}
+.insta_grid img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.insta_box > p{
+  transform: translateY(50px);
+}
+.x_icon{
+  width: 20px;
+  padding: 0px 15px;
+}
+.insta_box .readmore{
+  margin-top: -30px;
+}

@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* 기본스타일 3가지(폰트, 색상, 링크) */
+
+/* Noto Noto Serif KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+/* Noto Sans KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --main_font: 'Noto Serif KR';
+  --sub_font: 'Noto Sans KR';
+
+  --main_color01:#ff8c00;
+  --main_color02:#c8dee3;
+  --sub_color01:#f1ece6;
+  --sub_color02:#757575;
+  --sub_color03:#D9D9D9;
+
+  --txt_color01:#333333;
+  --txt_color02:#0C0C0C;
+  --txt_color03:#D9D9D9;
+
+  --font_size_12:12px;
+  --font_size_13:13px;
+  --font_size_14:14px;
+  --font_size_16:16px;
+  --font_size_18:18px;
+  --font_size_20:20px;
+  --font_size_24:24px;
+  --font_size_32:32px;
+  --font_size_40:40px;
+}
+
+body{
+  font-family: "Noto Serif KR", "Noto Sans KR", arial;
+  font-size:var(--font_size_12);
+  color:var(--txt_color01);
+  line-height:160%;
+}
+
+a{
+  color: inherit;
+  text-decoration:none;
+}
+
+
+/* header서식 */
+header{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+.header_box{
+  position: fixed;
+  top: 0px;
+  width: 100%; height: 119px;
+  background: #fff;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.h_top{   /* 로고, 로그인, 회원가입, 언어설정 박스 */
+  width: 1200px;
+  height: 75px;
+  position: relative;
+  margin: 10px auto;
+  z-index: 999;
+}
+h1{   /* 국순당 로고 */
+  width: 100px; height: 50px;
+  padding: 12.5px 20px;
+}
+.h_top .top_lnb{    /* 로그인, 회원가입, 언어설정 박스 */
+  position: absolute;
+  top: 26px; right: 0px;
+  font-size: 16px;
+}
+.top_lnb, .top_lnb > ul{    /* 로그인, 회원가입, 언어설정 */
+  display: flex;
+  padding: 0px 20px;
+}
+.top_lnb > ul > li{   /* 로그인, 회원가입 */
+  padding: 0px 5px;
+  text-align: center;
+}
+.top_lnb > ul > li:first-child::after{    /* 로그인, 회원가입 사이 · 표시 */
+  content: "·";
+  padding-left: 10px;
+}
+
+.lang{    /* 언어설정박스 */
+  width: 125px; height: 30px;
+  background: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  text-align: center;
+  line-height: 190%;
+  font-family: var(--sub_font);
+  transform: translateY(-5px);
+  font-size: var(--font_size_14);
+}
+.lang:hover .lang_list{display: block;}   /* 언어설정 호버 */
+.lang > ul{position: relative;}   /* 언어설정 호버시 나오는 내용 */
+
+.lang_list{   /* 언어설정 호버시 나오는 내용 */
+  display: none;
+  width: 125px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  position: absolute; top: 0px;
+  overflow: hidden;
+}
+.lang_list li a{display: block;}    /* 언어설정 호버시 나오는 내용 */
+.lang_list li:hover{background: var(--main_color02);}   /* 언어설정 호버시 배경 색 변경 */
+.lang_list li:first-child:hover{background: none;}   /* 언어설정 호버시 패밀리사이트 색만 따로 변경 */
+
+.h_bottom{    /* 내비게이션 메뉴 */
+  position:absolute;
+  left:0px;top:-10px;
+  padding-top:75px;
+  width: 100%; height: 45px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 100;
+}
+.gnb > ul > li > a::after{    /* 내비게이션 호버시 나올 주황 밑줄 디자인*/
+  display: block;
+  content: "";
+  background: var(--main_color01);
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+.gnb > ul > li:hover > a::after{    /* 내비게이션 호버시 밑줄 나오게 */
+  transform: scaleX(1);
+}
+.h_bottom:hover{    /* 내비게이션 호버시 전체 흰박스 */
+  height: 380px;
+  background: rgb(255,255,255,0.5);
+}
+.gnb > ul{     /* 내비게이션 전체 박스 */
+  width: 750px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.gnb > ul > li{     /* 내비게이션 세로줄 전체 박스 */
+  line-height:48px;
+  text-align:center;
+  padding:0px 30px;
+  position:relative;
+}
+.gnb > ul > li > a{   /* gnb 메뉴 */
+  color:var(--txt_color02);
+  font-size:18px;
+  font-weight: bold;
+}
+.gnb > ul > li > ul > li{font-size: var(--font_size_14);}   /* lnb 메뉴 */
+.gnb > ul > li > ul > li:hover{     /* lnb 메뉴 호버시 밑줄 */
+  text-decoration: underline;
+}
+
+/* footer서식 */
+footer{     /* 푸터 전체 박스 */
+  margin: 0 auto;
+  background: var(--main_color02);
+}
+.f_top{   /* 푸터 위 흰박스 영역 */
+  width: 100%;
+  height: 50px;
+  background: #fff;
+}
+.f_nav{   /* 푸터 위 흰박스 내비 (개인정보처리방침, 이용약관, 찾아오시는길) */
+  width: 1200px;
+  margin: 0 auto;
+}
+.f_nav > ul{    /* 푸터 위 흰박스 내비*/
+  display: flex;
+}
+.f_nav > ul > li{   /* 푸터 위 흰박스 내비 */
+  padding-right: 20px;
+  font-size: var(--font_size_16);
+  color: var(--txt_color01)
+}
+.f_nav > ul > li:hover{text-decoration: underline;}   /*푸터 위 흰박스 내비 호버 */
+.f_bottom{    /* 푸터 아래 하늘색 박스 */
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  background: var(--main_color02);
+  font-size: var(--font_size_14);
+  line-height: 180%;
+}
+.f_bottom > h2{   /* 푸터 아래 하늘색 박스의 로고 */
+  padding: 40px 0px 10px 0px;
+}
+.f_bottom > h2> img{    /* 푸터 아래 하늘색 박스 로고 */
+  width: 146px; height: 71px;
+}
+.f_b_inner, .add_top, .sns{display: flex;}
+.add_top{padding: 10px 0px;}    /* 푸터 아래 국순당,사업자등록번호,대표 박스 */
+.add_top > p{   /* 푸터 아래 국순당, 사업자등록번호, 대표 개별박스*/
+  font-weight: bold;
+  padding-right: 20px;
+}
+.adr_l{   /* 푸터 아래 왼쪽 고객센터, 횡성본사, 서울사무소*/
+  float: left;
+  padding-right: 20px;
+  font-weight: bold;
+}
+.f_b_inner{position: relative;}   /* 푸터 아래 로고 제외 전체 박스 */
+.f_button{    /* 푸터 아래 패밀리사이트, sns 박스*/
+  position: absolute;
+  bottom: 0px; right: 0px;
+}
+.familysite{    /* 푸터의 패밀리박스 */
+  width: 164px; height: 35px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  margin: 0px 0px 20px 10px;
+  text-align: center;
+  line-height: 250%;
+}
+.familysite:hover .family_list{display: block;}   /* 패밀리박스 호버 */
+.familysite > ul{position: relative;}   /* 패밀리박스 호버시 나오는 내용 */
+
+.family_list{   /* 패밀리박스 호버시 나오는 내용 */
+  display: none;
+  width: 164px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  position: absolute;
+  top: -245px;
+  overflow: hidden;
+}
+.family_list li a{display: block;}    /* 패밀리박스 호버시 나오는 내용 */
+.family_list li:hover{background: var(--main_color02);}   /* 패밀리박스 호버시 배경 색 변경 */
+.family_list li:last-child:hover{background: none;}   /* 패밀리박스 호버시 패밀리사이트 색만 따로 변경 */
+
+.sns span{display: none;}   /* sns 텍스트 숨김 */
+.sns > li{    /* sns 아이콘 */
+  width: 48px; height: 48px;
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+  margin-left:10px;
+  line-height: 240%;
+  font-size: var(--font_size_20);
+  text-align: center;
+}
+.sns > li > a{    /* sns 아이콘 */
+  padding: 10px 0px;
+}
+.copyright{   /* 최하단 카피라이트 */
+  text-align: center;
+  font-size: var(--font_size_12);
+  font-family: var(--sub_font);
+}
+
+/* TOP버튼 */
+.top_btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  padding: 10px 12px 15px 14px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: var(--font_size_14);
+  font-family: var(--sub_font);
+  font-weight: bold;
+  box-shadow: 0px 0px 5px var(--sub_color03);
+  text-align: center;
+  line-height: 100%;
+}
+.top_btn:hover {
+color: var(--main_color01);
+}
+
+/* arrow icon (span tag) */
+#top_btn span {
+width: 108px;
+height: 108px;
+display: block;
+margin-bottom: 7px;
+background: #ddd url(up-arrow.png) no-repeat center center;
+/* rounded corners */
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+/* transition */
+-webkit-transition: 1s;
+-moz-transition: 1s;
+transition: 1s;
+}
+#top_btn a:hover span {
+background-color: #777;
+}
+
+
+

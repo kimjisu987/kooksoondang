@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+/* 기본스타일 3가지(폰트, 색상, 링크) */
+
+/* Noto Noto Serif KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+/* Noto Sans KR 폰트 (메인) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+  --main_font: 'Noto Serif KR';
+  --sub_font: 'Noto Sans KR';
+
+  --main_color01:#ff8c00;
+  --main_color02:#c8dee3;
+  --sub_color01:#f1ece6;
+  --sub_color02:#757575;
+  --sub_color03:#D9D9D9;
+
+  --txt_color01:#333333;
+  --txt_color02:#0C0C0C;
+  --txt_color03:#D9D9D9;
+
+  --font_size_12:0.75rem;
+  --font_size_13:0.813rem;
+  --font_size_14:0.875rem;
+  --font_size_16:1rem;
+  --font_size_18:1.125rem;
+  --font_size_20:1.25rem;
+  --font_size_24:1.5rem;
+  --font_size_32:2rem;
+  --font_size_40:2.5rem;
+
+  --swiper-navigation-size: 30px !important;
+}
+
+body{
+  font-family: "Noto Serif KR", "Noto Sans KR", arial;
+  font-size:var(--font_size_12);
+  color:var(--txt_color01);
+  line-height:160%;
+  width: 100%;
+}
+a{
+  color: inherit;
+  text-decoration:none;
+}
+/* 메인시작 */
+main{
+  transform: translateY(-215px);
+  position: relative;
+  width: 100%; height: auto;
+  margin-bottom: -120px;
+}
+/* 1. 메인슬라이드 */
+/* 슬라이드 박스 전체 */
+.main_slide_box .swiper {
+  top: 0px; left: 0px;
+  width: 100%;
+  height: 800px;
+  z-index: 1;
+}
+/* 슬라이드 박스 */
+.main_slide_box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 슬라이드 이미지 */
+.main_slide_box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 슬라이드 좌,우측 버튼 */
+.main_slide_box .swiper-button-next, .main_slide_box .swiper-button-prev{
+  color: #fff;
+  text-shadow: 0px 0px 3px #000;
+}
+/* 슬라이드 아래 버튼 버튼 비활성화 */
+.main_slide_box .swiper-pagination-bullet{
+  background: #fff;
+  width: 70px; height: 5px;
+  border-radius: 0px;
+  opacity: 60%;
+  box-shadow: 0px 0px 3px var(--sub_color02);
+}
+/* 슬라이드 아래 버튼 버튼 활성화 */
+.main_slide_box .swiper-pagination-bullet-active{
+  background: var(--main_color01);
+  opacity: 100%;
+}
+/* 슬라이드 이미지 위 텍스트 */
+.slide_txt{
+  position: absolute;
+  top: 580px; left: 15px;
+  z-index: 2;
+  line-height: 200%;
+  text-align: left;
+}
+.slide_txt > h2{
+  font-size: var(--font_size_32);
+  font-weight: bolder;
+  line-height: 300%;
+}
+.slide_txt > p{
+  font-size: var(--font_size_16);
+}
+
+
+/* h4 제목 전체 설정 */
+h4{
+  font-size: var(--font_size_24);
+  font-weight: bold;
+  text-align: center;
+  padding: 90px 0px 30px 0px;
+}
+
+
+/* 2. 국순당 제품소개 */
+.menu_box{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 제품소개 슬라이드 이미지 */
+.menu_box .swiper {
+  width: 100%;
+  box-sizing: content-box;
+  padding-bottom: 60px;
+}
+.menu_box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 제품소개 슬라이드 아래 원형 아이콘 */
+.menu_box .swiper-pagination-bullet{
+  background: var(--sub_color01);
+  width: 10px; height: 10px;
+  border-radius: 100%;
+  opacity: 60%;
+}
+.menu_box .swiper-pagination-bullet-active{
+  background: #ff8c00;
+  opacity: 100%;
+}
+/* 슬라이드 좌,우측 버튼 */
+.menu_box .swiper-button-next, .menu_box .swiper-button-prev{
+  color: var(--txt_color01);
+  /* scale: 80%; */
+  transform: translateY(-40px);
+}
+/* 자세히보기 버튼박스 디자인 */
+.readmore{
+  display: inline-block;
+  margin-top: 15px;
+  font-family: var(--sub_font);
+  font-size: var(--font_size_12);
+  padding: 7px 30px;
+  border: 2px solid var(--sub_color03);
+  border-radius: 30px;
+}
+/* 카테고리 메뉴박스 */
+.menu_box label{
+  display: inline-block;
+  width: 90px; height: 30px;
+  box-sizing: border-box;
+  font-family: var(--sub_font);
+  font-size: var(--font_size_16);
+  text-align: center;
+  line-height: 130%;
+  border: 2px solid var(--sub_color03);
+  border-radius: 20px;
+  padding: 3px 15px; margin: 0px 10px 50px 0px;
+}
+input.menu_radio[type=radio]{display: none;}
+input.menu_radio[type=radio]:checked + label{
+  font-weight: 500;
+  background: var(--main_color01);
+  border: 0px;
+  color: #fff;
+  line-height: 140%;
+}
+article .menu_slide1, article .menu_slide2, article .menu_slide3{
+  display: none;
+}
+#tab01:checked ~ .menu_slide1{display: block;}
+#tab02:checked ~ .menu_slide2{display: block;}
+#tab03:checked ~ .menu_slide3{display: block;}
+/* 제품설명 */
+figcaption{
+  font-size: var(--font_size_12);
+  line-height: 150%;
+}
+/* 제품명 */
+figcaption > h5{
+  font-size: var(--font_size_14);
+  line-height: 250%;
+}
+
+/* 3. 국순당 역사 */
+/* 전체 박스 */
+.history_box{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
+}
+/* 이미지 박스 */
+.history_box .h_img_box{
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+}
+/* 이미지 박스 세로 크기 반응형 효과 */
+.history_box .h_img_box:after{
+  content: "";
+  display: block;
+  padding-bottom: 60%;
+  
+}
+/* 이미지 박스 배경 설정 */
+.swiper-wrapper > div:first-child > div:first-child > div:first-child{
+  background: url(../../images/company_bg.jpg);
+  background-size: 180%;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 100% 100% 0% 0%;
+  background-repeat: no-repeat;
+
+}
+.swiper-wrapper > div:nth-child(2) > div:first-child > div:first-child{
+  background: url(../images/mobile_company_02.jpg);
+  background-size: 150%;
+  background-position: center center;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 100% 100% 0% 0%;
+  background-repeat: no-repeat;
+}
+.swiper-wrapper > div:nth-child(3) > div:first-child > div:first-child{
+  background: url(../images/mobile_company_03.jpg);
+  background-size: 220%;
+  background-position: center center;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 100% 100% 0% 0%;
+  background-repeat: no-repeat;
+}
+/* 국순당 역사 제목 위치 */
+.h_title{
+  position: relative;
+  top: 10px;
+}
+/* 이미지 박스 텍스트 */
+.history_box .h_img_box .years{
+  position: absolute;
+  left: 30px; bottom: 20px;
+  font-size: var(--font_size_32);
+  font-family: var(--sub_font);
+  font-weight: bold;
+  line-height: 120%;
+  text-align: left;
+}
+/* indent 안먹힘 - 방법 찾기 */
+.history_box .h_img_box .years span{
+}
+/* 제품 자세히보기 */
+.history_box .h_img_box a{
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  right: 30px; bottom: 20px;
+}
+/* 히스토리 텍스트 박스 */
+.h_txt_box{
+  width: 100%; height: 300px;
+  margin: 0 auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+.h_txt_left{
+  width: 15%;
+  float: left;
+  font-size: var(--font_size_16);
+  font-weight: bold;
+  font-family: var(--sub_font);
+  text-align: left;
+  color: var(--main_color01)
+}
+.h_txt_right{
+  width: 85%;
+  float: right;
+  text-align: left;
+  font-size: var(--font_size_13);
+  font-family: var(--sub_font);
+}
+/* 국순당 역사 슬라이드 이미지 */
+.history .swiper {
+  width: 90%;
+  height: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 50px;
+}
+.history .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.history .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 769px) {
+  .history .swiper-slide:first-child {
+    transition: transform 100ms;
+  }
+  .history .swiper-slide:first-child img {
+    transition: box-shadow 500ms;
+  }
+  .history .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(50%);
+    z-index: 2;
+  }
+  .history .swiper-slide.swiper-slide-active:first-child img {
+    box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+  }
+  .history .swiper-slide:nth-child(2) {
+    transition: transform 100ms;
+  }
+  .history .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(55%);
+    z-index: 1;
+  }
+  .history .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(-50%);
+  }
+  .history .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(-55%);
+  }
+}
+/* 슬라이드 버튼 서식 */
+.history .swiper-scrollbar{
+  transform: translateY(-5px);
+  background-color: var(--txt_color01);
+}
+.history .swiper-scrollbar-drag{
+  position: absolute;
+  top: -7px; left: 14%;
+  width: 12px !important; height: 12px !important;
+  border-radius: 100% !important;
+  background-color: var(--main_color01);
+  border: 3px solid var(--txt_color01);
+}
+.history .swiper-button-next, .history .swiper-button-prev{
+  color: #fff;
+  text-shadow: 0px 0px 3px #000;
+  transform: translateY(-150px);
+}
+
+/* 4. 국순당 광고이야기 */
+.poster_box{
+  width: 100%;
+  margin: 0 auto;
+}
+.poster_box > .poster_slide{
+  width: 90%; height: auto;
+}
+.card_design{
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 3px 5px #ddd;
+  border-radius: 15px;
+}
+.poster_card p{
+  font-size: var(--font_size_13);
+  line-height: 180%;
+  color: var(--sub_color02);
+}
+.poster_card .poster_name{
+  font-size: var(--font_size_16);
+  font-weight: bold;
+  color: var(--txt_color01);
+}
+/* 이미지 슬라이드 */
+.poster_box .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+.poster_box .swiper-slide img {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 769px) {
+  .poster_box .swiper-slide:first-child {
+    transition: transform 100ms;
+  }
+  .poster_box .swiper-slide:first-child img {
+    transition: box-shadow 500ms;
+  }
+  .poster_box .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(50%);
+    z-index: 2;
+  }
+  .poster_box .swiper-slide.swiper-slide-active:first-child img {
+    box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+  }
+  .poster_box .swiper-slide:nth-child(2) {
+    transition: transform 100ms;
+  }
+  .poster_box .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(55%);
+    z-index: 1;
+  }
+  .poster_box .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(-50%);
+  }
+  .poster_box .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(-55%);
+  }
+}
+/* 슬라이드 버튼 서식 */
+.poster_box .swiper-scrollbar{
+  transform: translateY(-10px);
+  background-color: #ebebeb;
+}
+.poster_box .swiper-scrollbar-drag{
+  position: absolute;
+  top: -5px; left: 6%;
+  width: 15px !important; height: 15px !important;
+  border-radius: 100% !important;
+  background-color: var(--main_color01);
+}
+.poster_box .swiper-button-next, .poster_box .swiper-button-prev{
+  color: var(--sub_color02);
+  transform: translateY(-50px);
+}
+
+/* 5. 국순당 인스타그램 */
+/* 전체 박스 */
+article{
+  text-align: center;
+}
+.insta_box{
+  width: 100%;
+  margin: 0 auto;
+}
+.insta_title{text-indent: -999px;}
+/* 국순당 인스타 클릭버튼 */
+.profile_box{
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: 0 auto;
+  font-size: var(--font_size_13);
+  font-weight: bold;
+  text-align: center;
+}
+.insta_list_sub{display: none;}
+.profile_box img{
+  width: 60px; height: 60px;
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box;
+}
+.profile_l img.border-active{
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, var(--main_color01) 0%,  var(--main_color02) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.profile_r img.border-active{
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, var(--main_color01) 0%,  var(--main_color02) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* 클릭이벤트시 바뀌는 내용들 */
+.insta_profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: left;
+}
+.insta_profile img{width: 50px;}
+.insta_list_main p{
+  font-size: var(--font_size_13);
+  transform: translateX(-16%);
+}
+.insta_list_sub p{
+  font-size: var(--font_size_13);
+  transform: translateX(0);
+}
+.insta_profile .insta_title{
+  font-size: var(--font_size_16);
+  font-weight: bold;
+}
+.insta_profile .fa-ellipsis{
+  font-size: 25px;
+}
+.insta_list_main .fa-ellipsis{
+  transform: translateX(19%);
+}
+/* 클릭이벤트로 바뀌지 않는 부분 */
+.insta_bottom{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+.fa-heart{color:var(--main_color01);}
+
+/* 슬라이드이미지 */
+.insta_slide img{
+  width: 100%;
+  object-fit: cover;
+  margin: 15px 0px 15px 0px;
+}
+.insta_box .swiper {
+  width: 100%;
+  height: 100%;
+}
+.insta_slide{
+}
+.insta_box .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.insta_box .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 슬라이드 버튼 서식 */
+.insta_box .swiper-button-next, .insta_box .swiper-button-prev{
+  color: #fff;
+  text-shadow: 0px 0px 3px #000;
+}
+.insta_slide .swiper-pagination,
+.insta_slide .swiper-pagination-fraction,
+.insta_slide .swiper-pagination-horizontal{
+  position: absolute;
+  top: 10%; left: 85%;
+  display: inline-block;
+  width: 45px; height: 30px;
+  z-index: 999;
+  color: #fff;
+  font-size: var(--font_size_14);
+  font-family: var(--sub_font);
+  font-weight: bold;
+  letter-spacing: -1px;
+  background: rgba(0,0,0,.5);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding-top: 5px;
+}
